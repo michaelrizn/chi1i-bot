@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Анализатор совместимости специй</title>
+    <meta name="description" content="Научный анализ совместимости специй с продуктами и способами приготовления">
+    <meta name="theme-color" content="#2481cc">
+    
+    <!-- Telegram WebApp -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0.0">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="js/data/spices.js" as="script">
+    <link rel="preload" href="js/data/products.js" as="script">
+    <link rel="preload" href="js/data/cooking-methods.js" as="script">
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <div class="loading-screen">
+                <h1>Анализатор совместимости специй</h1>
+                <p>Загрузка приложения...</p>
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Data -->
+    <script src="js/data/spices.js?v=1.0.0"></script>
+    <script src="js/data/products.js?v=1.0.0"></script>
+    <script src="js/data/cooking-methods.js?v=1.0.0"></script>
+    
+    <!-- Utils -->
+    <script src="js/utils/compatibility.js?v=1.0.0"></script>
+    <script src="js/utils/explanation.js?v=1.0.0"></script>
+    <script src="js/utils/compatibility-system.js?v=1.0.0"></script>
+    <script src="js/utils/telegram-webapp.js?v=1.0.0"></script>
+    
+    <!-- Components -->
+    <script src="js/components/cloud.js?v=1.0.0"></script>
+    <script src="js/components/analysis.js?v=1.0.0"></script>
+    <script src="js/components/selection-interface.js?v=1.0.0"></script>
+    
+    <!-- Main App -->
+    <script src="js/app.js?v=1.0.0"></script>
+    
+    <!-- Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
