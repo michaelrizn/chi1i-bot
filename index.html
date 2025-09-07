@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор совместимости специй</title>
+    <meta name="description" content="Минималистичный анализатор совместимости специй с научным обоснованием">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button id="reset-all" class="reset-btn">Сброс</button>
+        </header>
+
+        <main class="main">
+            <section class="tag-clouds">
+                <div class="tag-cloud-section">
+                    <h2 class="section-title">Продукты</h2>
+                    <div id="products-cloud" class="tag-cloud"></div>
+                </div>
+
+                <div class="tag-cloud-section">
+                    <h2 class="section-title">Способы приготовления</h2>
+                    <div id="methods-cloud" class="tag-cloud"></div>
+                </div>
+
+                <div class="tag-cloud-section">
+                    <h2 class="section-title">Специи</h2>
+                    <div id="spices-cloud" class="tag-cloud"></div>
+                </div>
+            </section>
+
+            <section id="selected-section" class="selected-section hidden">
+                <h2 class="section-title">Выбранное</h2>
+                <div class="selected-content">
+                    <div id="selected-products" class="selected-group">
+                        <h3 class="selected-group-title">Продукты</h3>
+                        <div class="selected-tags"></div>
+                    </div>
+                    <div id="selected-methods" class="selected-group">
+                        <h3 class="selected-group-title">Способы приготовления</h3>
+                        <div class="selected-tags"></div>
+                    </div>
+                    <div id="selected-spices" class="selected-group">
+                        <h3 class="selected-group-title">Специи</h3>
+                        <div class="selected-tags"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="explanations-section" class="explanations-section hidden">
+                <div class="explanation-block compatibility">
+                    <h2 class="explanation-title">Почему это сочетание подходит</h2>
+                    <div id="compatibility-content" class="explanation-content"></div>
+                </div>
+
+                <div class="explanation-block cooking-processes">
+                    <h2 class="explanation-title">Процессы при готовке</h2>
+                    <div id="cooking-content" class="explanation-content"></div>
+                </div>
+
+                <div class="explanation-block chemical-reactions">
+                    <h2 class="explanation-title">Химические процессы</h2>
+                    <div id="chemical-content" class="explanation-content"></div>
+                </div>
+
+                <div class="explanation-block spice-mixtures hidden">
+                    <h2 class="explanation-title">Анализ смесей специй</h2>
+                    <div id="spice-mixtures" class="explanation-content"></div>
+                </div>
+
+                <div class="explanation-block scientific-basis hidden">
+                    <h2 class="explanation-title">Научные обоснования</h2>
+                    <div id="scientific-basis" class="explanation-content"></div>
+                </div>
+
+                <div class="explanation-block recommendations">
+                    <h2 class="explanation-title">Рекомендации</h2>
+                    <div id="recommendations-content" class="explanation-content"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    
+
+    <script src="js/performance-optimizer.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/compatibility.js"></script>
+    <script src="js/detailed-analysis.js"></script>
+    <script src="js/spice-mixture-analysis.js"></script>
+    <script src="js/comprehensive-analyzer.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

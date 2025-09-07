@@ -1,0 +1,968 @@
+[
+  {
+    "id": 1,
+    "name": "Базилик",
+    "category": "травы",
+    "intensity": 5,
+    "role": "базовая",
+    "taste_profile": ["ароматный", "пряный"],
+    "chemical_compounds": {
+      "volatile_oils": ["эвгенол", "линалоол"],
+      "phenolic_compounds": ["тимол", "карвакрол"],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [2, 4, 5, 3],
+    "incompatible_spices": [15, 32],
+    "incompatible_products": [12, 18],
+    "incompatible_methods": [7, 8, 9, 10, 13, 14],
+    "best_products": ["мясо", "овощи", "рыба"]
+  },
+  {
+    "id": 2,
+    "name": "Орегано",
+    "category": "травы",
+    "intensity": 6,
+    "role": "базовая",
+    "taste_profile": ["острый", "горьковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["карвакрол", "тимол"],
+      "phenolic_compounds": ["розмариновая кислота"],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 6, 7, 8],
+    "incompatible_spices": [28],
+    "incompatible_products": [4, 8, 9, 18],
+    "incompatible_methods": [1, 11, 15],
+    "best_products": ["мясо", "овощи", "сыр"]
+  },
+  {
+    "id": 3,
+    "name": "Тимьян",
+    "category": "травы",
+    "intensity": 6,
+    "role": "связывающая",
+    "taste_profile": ["ароматный", "пряный"],
+    "chemical_compounds": {
+      "volatile_oils": ["линалоол", "тимол"],
+      "phenolic_compounds": ["карвакрол"],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 6, 8, 10, 12],
+    "incompatible_spices": [35],
+    "incompatible_products": [4, 8, 9, 18],
+    "incompatible_methods": [1, 7, 9, 11, 13, 14, 15],
+    "best_products": ["мясо", "птица", "овощи"]
+  },
+  {
+    "id": 4,
+    "name": "Розмарин",
+    "category": "травы",
+    "intensity": 7,
+    "role": "акцентная",
+    "taste_profile": ["смолистый", "горьковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["камфора"],
+      "phenolic_compounds": ["розмариновая кислота", "карнозол"],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [6, 8, 9, 10, 12],
+    "incompatible_spices": [6, 7],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_methods": [1, 11, 15],
+    "best_products": ["мясо", "картофель", "хлеб"]
+  },
+  {
+    "id": 5,
+    "name": "Шалфей",
+    "category": "травы",
+    "intensity": 7,
+    "role": "связывающая",
+    "taste_profile": ["горьковатый", "камфорный"],
+    "chemical_compounds": {
+      "volatile_oils": ["цинеол", "камфора"],
+      "phenolic_compounds": ["туйон"],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [6, 8, 12],
+    "incompatible_spices": [38],
+    "incompatible_products": [4, 8, 9, 12, 18],
+    "incompatible_methods": [1, 7, 9, 11, 13, 14, 15],
+    "best_products": ["мясо", "птица", "паста"]
+  },
+  {
+    "id": 6,
+    "name": "Петрушка",
+    "category": "травы",
+    "intensity": 3,
+    "role": "финишная",
+    "taste_profile": ["свежий", "травянистый"],
+    "chemical_compounds": {
+      "volatile_oils": ["апиол", "миристицин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 2, 5, 11],
+    "incompatible_spices": [4, 30],
+    "incompatible_products": [2, 3, 5, 24],
+    "incompatible_methods": [7, 8, 9, 10, 13, 14],
+    "best_products": ["рыба", "овощи", "супы"]
+  },
+  {
+    "id": 7,
+    "name": "Укроп",
+    "category": "травы",
+    "intensity": 4,
+    "role": "финишная",
+    "taste_profile": ["свежий", "анисовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["карвон", "лимонен"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 2, 5, 11],
+    "incompatible_spices": [4, 31],
+    "incompatible_products": [2, 3, 5, 24],
+    "incompatible_methods": [7, 8, 9, 10, 13, 14],
+    "best_products": ["рыба", "овощи", "молочные"]
+  },
+  {
+    "id": 8,
+    "name": "Кориандр",
+    "category": "семена",
+    "intensity": 5,
+    "role": "базовая",
+    "taste_profile": ["цитрусовый", "ореховый"],
+    "chemical_compounds": {
+      "volatile_oils": ["линалоол", "гераниол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [4, 5, 6, 7, 8, 15],
+    "incompatible_spices": [19],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_methods": [1, 11, 13, 14],
+    "best_products": ["мясо", "овощи", "рис"]
+  },
+  {
+    "id": 9,
+    "name": "Кумин",
+    "category": "семена",
+    "intensity": 6,
+    "role": "базовая",
+    "taste_profile": ["земляной", "ореховый"],
+    "chemical_compounds": {
+      "volatile_oils": ["куминальдегид", "лимонен"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [4, 5, 6, 7, 8, 15],
+    "incompatible_spices": [24, 33],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_methods": [1, 11, 13, 14],
+    "best_products": ["мясо", "бобовые", "рис"]
+  },
+  {
+    "id": 10,
+    "name": "Тмин",
+    "category": "семена",
+    "intensity": 6,
+    "role": "связывающая",
+    "taste_profile": ["острый", "горьковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["карвон", "лимонен"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [4, 5, 6, 8, 15],
+    "incompatible_spices": [16],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 24],
+    "incompatible_methods": [1, 7, 9, 11, 13, 14],
+    "best_products": ["хлеб", "капуста", "сыр"]
+  },
+  {
+    "id": 11,
+    "name": "Фенхель",
+    "category": "семена",
+    "intensity": 5,
+    "role": "связывающая",
+    "taste_profile": ["сладкий", "анисовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["анетол", "фенхон"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 2, 4, 5, 15],
+    "incompatible_spices": [2],
+    "incompatible_products": [2, 3, 5, 24],
+    "incompatible_methods": [7, 8, 9, 10, 13, 14],
+    "best_products": ["рыба", "овощи", "чай"]
+  },
+  {
+    "id": 12,
+    "name": "Горчица",
+    "category": "семена",
+    "intensity": 8,
+    "role": "акцентная",
+    "taste_profile": ["острый", "жгучий"],
+    "chemical_compounds": {
+      "volatile_oils": ["аллилизотиоцианат"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "хорошо",
+      "oil": "плохо",
+      "alcohol": "частично"
+    },
+    "compatible_methods": [2, 4, 7],
+    "incompatible_spices": [25, 38],
+    "incompatible_products": [4, 8, 9, 18],
+    "incompatible_methods": [1, 8, 9, 11, 13, 14, 15],
+    "best_products": ["мясо", "овощи", "соусы"]
+  },
+  {
+    "id": 13,
+    "name": "Кардамон",
+    "category": "семена",
+    "intensity": 6,
+    "role": "связывающая",
+    "taste_profile": ["сладкий", "цитрусовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["цинеол", "терпинилацетат"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 8, 13, 14],
+    "incompatible_spices": [39],
+    "incompatible_products": [2, 3, 5, 10, 11, 24],
+    "incompatible_methods": [1, 7, 9, 11, 15],
+    "best_products": ["десерты", "рис", "чай"]
+  },
+  {
+    "id": 14,
+    "name": "Анис",
+    "category": "семена",
+    "intensity": 5,
+    "role": "акцентная",
+    "taste_profile": ["сладкий", "лакричный"],
+    "chemical_compounds": {
+      "volatile_oils": ["анетол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 8, 14],
+    "incompatible_spices": [2],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24],
+    "incompatible_methods": [1, 7, 9, 11, 13, 15],
+    "best_products": ["десерты", "хлеб", "чай"]
+  },
+  {
+    "id": 15,
+    "name": "Имбирь",
+    "category": "корнеплоды",
+    "intensity": 7,
+    "role": "доминирующая",
+    "taste_profile": ["острый", "жгучий"],
+    "chemical_compounds": {
+      "volatile_oils": ["зингерон", "гингерол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [2, 4, 5, 6, 7, 8],
+    "incompatible_spices": [1, 27],
+    "incompatible_products": [18],
+    "incompatible_methods": [1, 9, 11, 13, 14, 15],
+    "best_products": ["мясо", "рыба", "овощи"]
+  },
+  {
+    "id": 16,
+    "name": "Куркума",
+    "category": "корнеплоды",
+    "intensity": 5,
+    "role": "базовая",
+    "taste_profile": ["землистый", "горьковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["куркумин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [4, 5, 6, 7, 8],
+    "incompatible_spices": [10, 34],
+    "incompatible_products": [4, 8, 9, 18],
+    "incompatible_methods": [1, 11, 13, 14, 15],
+    "best_products": ["рис", "овощи", "мясо"]
+  },
+  {
+    "id": 17,
+    "name": "Хрен",
+    "category": "корнеплоды",
+    "intensity": 9,
+    "role": "акцентная",
+    "taste_profile": ["острый", "жгучий"],
+    "chemical_compounds": {
+      "volatile_oils": ["аллилизотиоцианат"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "хорошо",
+      "oil": "плохо",
+      "alcohol": "частично"
+    },
+    "compatible_methods": [1, 2],
+    "incompatible_spices": [25],
+    "incompatible_products": [10, 11, 12, 13, 18, 23],
+    "incompatible_methods": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    "best_products": ["мясо", "рыба", "соусы"]
+  },
+  {
+    "id": 18,
+    "name": "Галанга",
+    "category": "корнеплоды",
+    "intensity": 6,
+    "role": "акцентная",
+    "taste_profile": ["острый", "цитрусовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["галангин", "эвгенол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [4, 5, 6, 7],
+    "incompatible_spices": [11],
+    "incompatible_products": [2, 3, 5, 24],
+    "incompatible_methods": [1, 8, 9, 11, 13, 14, 15],
+    "best_products": ["рыба", "курица", "овощи"]
+  },
+  {
+    "id": 19,
+    "name": "Черный перец",
+    "category": "перцы",
+    "intensity": 7,
+    "role": "поддерживающая",
+    "taste_profile": ["острый", "жгучий"],
+    "chemical_compounds": {
+      "volatile_oils": ["пиперин"],
+      "phenolic_compounds": [],
+      "alkaloids": ["пиперин"]
+    },
+    "solubility": {
+      "water": "хорошо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [2, 5, 6, 7, 8, 9],
+    "incompatible_spices": [8, 30],
+    "incompatible_products": [1, 4],
+    "incompatible_methods": [9, 10, 13, 14],
+    "best_products": ["мясо", "овощи", "соусы"]
+  },
+  {
+    "id": 20,
+    "name": "Белый перец",
+    "category": "перцы",
+    "intensity": 6,
+    "role": "поддерживающая",
+    "taste_profile": ["острый", "землистый"],
+    "chemical_compounds": {
+      "volatile_oils": ["пиперин"],
+      "phenolic_compounds": [],
+      "alkaloids": ["пиперин"]
+    },
+    "solubility": {
+      "water": "хорошо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 2, 5, 6, 7, 8],
+    "incompatible_spices": [],
+    "incompatible_products": [12, 18],
+    "incompatible_methods": [13, 14, 15],
+    "best_products": ["рыба", "птица", "соусы"]
+  },
+  {
+    "id": 21,
+    "name": "Красный перец",
+    "category": "перцы",
+    "intensity": 8,
+    "role": "акцентная",
+    "taste_profile": ["жгучий", "сладковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["капсаицин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 6, 7, 8, 9],
+    "incompatible_spices": [25, 38],
+    "incompatible_products": [4, 8, 9, 12, 18],
+    "incompatible_methods": [1, 11, 13, 14, 15],
+    "best_products": ["мясо", "овощи", "соусы"]
+  },
+  {
+    "id": 22,
+    "name": "Паприка",
+    "category": "перцы",
+    "intensity": 4,
+    "role": "базовая",
+    "taste_profile": ["сладкий", "дымный"],
+    "chemical_compounds": {
+      "volatile_oils": ["каротиноиды", "капсантин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "частично"
+    },
+    "compatible_methods": [5, 6, 7, 8, 9],
+    "incompatible_spices": [],
+    "incompatible_products": [4, 8, 9, 18],
+    "incompatible_methods": [1, 11, 13, 14, 15],
+    "best_products": ["мясо", "овощи", "рис"]
+  },
+  {
+    "id": 23,
+    "name": "Чили",
+    "category": "перцы",
+    "intensity": 9,
+    "role": "доминирующая",
+    "taste_profile": ["жгучий", "фруктовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["капсаицин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 6, 7, 8, 9],
+    "incompatible_spices": [25, 38],
+    "incompatible_products": [4, 8, 9, 12, 18],
+    "incompatible_methods": [1, 11, 13, 14, 15],
+    "best_products": ["мясо", "овощи", "соусы"]
+  },
+  {
+    "id": 24,
+    "name": "Гвоздика",
+    "category": "цветы",
+    "intensity": 8,
+    "role": "акцентная",
+    "taste_profile": ["пряный", "сладковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["эвгенол", "ацетилэвгенол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 6, 8, 13, 14],
+    "incompatible_spices": [9],
+    "incompatible_products": [4, 8, 9, 10, 11, 23],
+    "incompatible_methods": [1, 7, 9, 11, 15],
+    "best_products": ["мясо", "фрукты", "десерты"]
+  },
+  {
+    "id": 25,
+    "name": "Шафран",
+    "category": "цветы",
+    "intensity": 7,
+    "role": "акцентная",
+    "taste_profile": ["сладкий", "медовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["сафранал", "кроцин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "хорошо",
+      "oil": "плохо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 5, 8, 11],
+    "incompatible_spices": [12, 17, 21, 23],
+    "incompatible_products": [2, 3, 5, 10, 11, 24],
+    "incompatible_methods": [7, 9, 13, 14, 15],
+    "best_products": ["рис", "рыба", "десерты"]
+  },
+  {
+    "id": 26,
+    "name": "Лаванда",
+    "category": "цветы",
+    "intensity": 6,
+    "role": "акцентная",
+    "taste_profile": ["цветочный", "сладкий"],
+    "chemical_compounds": {
+      "volatile_oils": ["линалоол", "линалилацетат"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 14],
+    "incompatible_spices": [5],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 23, 24],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["десерты", "мед", "чай"]
+  },
+  {
+    "id": 27,
+    "name": "Корица",
+    "category": "кора",
+    "intensity": 6,
+    "role": "доминирующая",
+    "taste_profile": ["сладкий", "пряный"],
+    "chemical_compounds": {
+      "volatile_oils": ["коричный альдегид"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 13, 14],
+    "incompatible_spices": [15, 36],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 23, 24],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["фрукты", "десерты", "хлеб"]
+  },
+  {
+    "id": 28,
+    "name": "Лавровый лист",
+    "category": "кора",
+    "intensity": 6,
+    "role": "связывающая",
+    "taste_profile": ["ароматный", "горьковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["цинеол", "эвгенол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [2, 3, 5, 6, 8, 10, 12],
+    "incompatible_spices": [2],
+    "incompatible_products": [4, 8, 9, 18],
+    "incompatible_methods": [1, 7, 9, 11, 13, 14, 15],
+    "best_products": ["мясо", "супы", "соусы"]
+  },
+  {
+    "id": 29,
+    "name": "Кассия",
+    "category": "кора",
+    "intensity": 7,
+    "role": "доминирующая",
+    "taste_profile": ["сладкий", "острый"],
+    "chemical_compounds": {
+      "volatile_oils": ["коричный альдегид", "кумарин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 13, 14],
+    "incompatible_spices": [15],
+    "incompatible_products": [4, 8, 9, 10, 11, 12, 13, 15, 23],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["десерты", "мясо", "чай"]
+  },
+  {
+    "id": 30,
+    "name": "Можжевельник",
+    "category": "ягоды",
+    "intensity": 7,
+    "role": "акцентная",
+    "taste_profile": ["хвойный", "горьковатый"],
+    "chemical_compounds": {
+      "volatile_oils": ["пинен", "мирцен"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [9, 10],
+    "incompatible_spices": [6, 19],
+    "incompatible_products": [1, 4, 6, 7, 8, 9, 10, 11, 12, 13, 15, 18, 23],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 13, 14, 15],
+    "best_products": ["дичь", "мясо", "джин"]
+  },
+  {
+    "id": 31,
+    "name": "Бадьян",
+    "category": "ягоды",
+    "intensity": 7,
+    "role": "акцентная",
+    "taste_profile": ["сладкий", "анисовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["анетол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 8, 14],
+    "incompatible_spices": [7],
+    "incompatible_products": [4, 8, 9, 10, 11, 13, 15, 23],
+    "incompatible_methods": [1, 2, 3, 4, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["мясо", "фрукты", "чай"]
+  },
+  {
+    "id": 32,
+    "name": "Душистый перец",
+    "category": "ягоды",
+    "intensity": 6,
+    "role": "связывающая",
+    "taste_profile": ["пряный", "сложный"],
+    "chemical_compounds": {
+      "volatile_oils": ["эвгенол", "метилэвгенол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [5, 6, 8, 9, 10],
+    "incompatible_spices": [1],
+    "incompatible_products": [4, 8, 9, 10, 11, 12, 13, 18, 23],
+    "incompatible_methods": [1, 2, 3, 4, 7, 11, 12, 13, 14, 15],
+    "best_products": ["мясо", "фрукты", "соусы"]
+  },
+  {
+    "id": 33,
+    "name": "Мускатный орех",
+    "category": "орехи",
+    "intensity": 7,
+    "role": "акцентная",
+    "taste_profile": ["сладкий", "пряный"],
+    "chemical_compounds": {
+      "volatile_oils": ["миристицин", "элемицин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 14],
+    "incompatible_spices": [9],
+    "incompatible_products": [4, 8, 9, 10, 11, 15, 23],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["молочные", "десерты", "мясо"]
+  },
+  {
+    "id": 34,
+    "name": "Мускатный цвет",
+    "category": "орехи",
+    "intensity": 6,
+    "role": "акцентная",
+    "taste_profile": ["сладкий", "деликатный"],
+    "chemical_compounds": {
+      "volatile_oils": ["миристицин", "сабинен"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 14],
+    "incompatible_spices": [16],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 23, 24],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["молочные", "десерты", "соусы"]
+  },
+  {
+    "id": 35,
+    "name": "Асафетида",
+    "category": "экзотические",
+    "intensity": 9,
+    "role": "акцентная",
+    "taste_profile": ["острый", "луковый"],
+    "chemical_compounds": {
+      "volatile_oils": ["ферулавая кислота"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [4, 5, 6, 7],
+    "incompatible_spices": [3],
+    "incompatible_products": [4, 8, 9, 12, 13, 18],
+    "incompatible_methods": [1, 8, 9, 11, 13, 14, 15],
+    "best_products": ["бобовые", "овощи", "мясо"]
+  },
+  {
+    "id": 36,
+    "name": "Сумах",
+    "category": "экзотические",
+    "intensity": 5,
+    "role": "акцентная",
+    "taste_profile": ["кислый", "фруктовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["танины", "антоцианы"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "хорошо",
+      "oil": "плохо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 7, 9],
+    "incompatible_spices": [27],
+    "incompatible_products": [4, 8, 9, 12, 13],
+    "incompatible_methods": [5, 6, 8, 10, 11, 12, 13, 14, 15],
+    "best_products": ["мясо", "салаты", "хлеб"]
+  },
+  {
+    "id": 37,
+    "name": "Заатар",
+    "category": "экзотические",
+    "intensity": 5,
+    "role": "связывающая",
+    "taste_profile": ["травянистый", "кислый"],
+    "chemical_compounds": {
+      "volatile_oils": ["карвакрол", "тимол"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 7, 8, 9],
+    "incompatible_spices": [],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 24],
+    "incompatible_methods": [5, 6, 11, 12, 13, 14, 15],
+    "best_products": ["хлеб", "овощи", "сыр"]
+  },
+  {
+    "id": 38,
+    "name": "Ваниль",
+    "category": "ароматические",
+    "intensity": 6,
+    "role": "доминирующая",
+    "taste_profile": ["сладкий", "кремовый"],
+    "chemical_compounds": {
+      "volatile_oils": ["ванилин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 13, 14],
+    "incompatible_spices": [5, 12, 21, 23],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15, 23, 24],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["десерты", "фрукты", "молочные"]
+  },
+  {
+    "id": 39,
+    "name": "Бергамот",
+    "category": "ароматические",
+    "intensity": 5,
+    "role": "финишная",
+    "taste_profile": ["цитрусовый", "цветочный"],
+    "chemical_compounds": {
+      "volatile_oils": ["лимонен", "линалилацетат"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 11],
+    "incompatible_spices": [13],
+    "incompatible_products": [1, 2, 3, 5, 6, 7, 10, 11, 12, 13, 15, 23, 24],
+    "incompatible_methods": [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15],
+    "best_products": ["чай", "десерты", "рыба"]
+  },
+  {
+    "id": 40,
+    "name": "Тонка бобы",
+    "category": "ароматические",
+    "intensity": 7,
+    "role": "акцентная",
+    "taste_profile": ["сладкий", "ванильный"],
+    "chemical_compounds": {
+      "volatile_oils": ["кумарин"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "плохо",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [8, 14],
+    "incompatible_spices": [],
+    "incompatible_products": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 23, 24],
+    "incompatible_methods": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+    "best_products": ["десерты", "шоколад", "кофе"]
+  },
+  {
+    "id": 41,
+    "name": "Мята",
+    "category": "травы",
+    "intensity": 5,
+    "role": "финишная",
+    "taste_profile": ["освежающий", "холодящий"],
+    "chemical_compounds": {
+      "volatile_oils": ["ментол", "ментон"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 11],
+    "incompatible_spices": [],
+    "incompatible_products": [1, 2, 3, 5, 6, 7, 12, 13, 15, 24],
+    "incompatible_methods": [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15],
+    "best_products": ["чай", "десерты", "салаты"]
+  },
+  {
+    "id": 42,
+    "name": "Эстрагон",
+    "category": "травы",
+    "intensity": 5,
+    "role": "поддерживающая",
+    "taste_profile": ["анисовый", "пряный"],
+    "chemical_compounds": {
+      "volatile_oils": ["эстрагол", "оцимен"],
+      "phenolic_compounds": [],
+      "alkaloids": []
+    },
+    "solubility": {
+      "water": "частично",
+      "oil": "хорошо",
+      "alcohol": "хорошо"
+    },
+    "compatible_methods": [1, 2, 5, 11],
+    "incompatible_spices": [],
+    "incompatible_products": [2, 3, 5, 12, 13, 18, 24],
+    "incompatible_methods": [7, 8, 9, 10, 13, 14, 15],
+    "best_products": ["птица", "рыба", "соусы"]
+  }
+]

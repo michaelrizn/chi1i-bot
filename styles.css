@@ -1,0 +1,1238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary: #6b7280;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --surface-hover: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --border: #374151;
+    --border-light: #4b5563;
+    
+    --spice-herbs: #4ade80;
+    --spice-herbs-bg: rgba(74, 222, 128, 0.15);
+    --spice-herbs-hover: rgba(74, 222, 128, 0.25);
+    
+    --spice-seeds: #fbbf24;
+    --spice-seeds-bg: rgba(251, 191, 36, 0.15);
+    --spice-seeds-hover: rgba(251, 191, 36, 0.25);
+    
+    --spice-roots: #fb923c;
+    --spice-roots-bg: rgba(251, 146, 60, 0.15);
+    --spice-roots-hover: rgba(251, 146, 60, 0.25);
+    
+    --spice-peppers: #ef4444;
+    --spice-peppers-bg: rgba(239, 68, 68, 0.15);
+    --spice-peppers-hover: rgba(239, 68, 68, 0.25);
+    
+    --spice-flowers: #ec4899;
+    --spice-flowers-bg: rgba(236, 72, 153, 0.15);
+    --spice-flowers-hover: rgba(236, 72, 153, 0.25);
+    
+    --spice-bark: #a3a3a3;
+    --spice-bark-bg: rgba(163, 163, 163, 0.15);
+    --spice-bark-hover: rgba(163, 163, 163, 0.25);
+    
+    --spice-berries: #8b5cf6;
+    --spice-berries-bg: rgba(139, 92, 246, 0.15);
+    --spice-berries-hover: rgba(139, 92, 246, 0.25);
+    
+    --spice-nuts: #d97706;
+    --spice-nuts-bg: rgba(217, 119, 6, 0.15);
+    --spice-nuts-hover: rgba(217, 119, 6, 0.25);
+    
+    --spice-exotic: #06b6d4;
+    --spice-exotic-bg: rgba(6, 182, 212, 0.15);
+    --spice-exotic-hover: rgba(6, 182, 212, 0.25);
+    
+    --spice-aromatic: #7c3aed;
+    --spice-aromatic-bg: rgba(124, 58, 237, 0.15);
+    --spice-aromatic-hover: rgba(124, 58, 237, 0.25);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+
+
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.lang-btn:hover {
+    background: var(--surface-hover);
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.reset-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-secondary);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.reset-btn:hover {
+    background: var(--error);
+    color: white;
+    border-color: var(--error);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tag-clouds {
+    display: grid;
+    gap: 2rem;
+}
+
+.tag-cloud-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-primary);
+    user-select: none;
+    min-height: 44px;
+}
+
+
+
+.tag:hover {
+    background: var(--surface-hover);
+    transform: translateY(-1px);
+}
+
+.tag.selected {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.tag.incompatible {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(0.6) brightness(0.7);
+    transform: scale(0.95);
+}
+
+.tag.mutually-excluded {
+    opacity: 0.3;
+    cursor: not-allowed;
+    filter: grayscale(0.8) brightness(0.5);
+    transform: scale(0.9);
+}
+
+.tag.incompatible.spice-herbs,
+.tag.incompatible.spice-seeds,
+.tag.incompatible.spice-roots,
+.tag.incompatible.spice-peppers,
+.tag.incompatible.spice-flowers,
+.tag.incompatible.spice-bark,
+.tag.incompatible.spice-berries,
+.tag.incompatible.spice-nuts,
+.tag.incompatible.spice-exotic,
+.tag.incompatible.spice-aromatic {
+    filter: grayscale(0.4) brightness(0.8) saturate(0.6);
+}
+
+.tag.mutually-excluded.spice-herbs,
+.tag.mutually-excluded.spice-seeds,
+.tag.mutually-excluded.spice-roots,
+.tag.mutually-excluded.spice-peppers,
+.tag.mutually-excluded.spice-flowers,
+.tag.mutually-excluded.spice-bark,
+.tag.mutually-excluded.spice-berries,
+.tag.mutually-excluded.spice-nuts,
+.tag.mutually-excluded.spice-exotic,
+.tag.mutually-excluded.spice-aromatic {
+    filter: grayscale(0.6) brightness(0.6) saturate(0.4);
+}
+
+.tag.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tag-remove {
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 200ms ease;
+}
+
+.tag-remove:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.tag.spice-herbs { 
+    border-color: var(--spice-herbs) !important; 
+    background: var(--spice-herbs-bg) !important;
+    color: var(--spice-herbs) !important;
+}
+
+.tag.spice-herbs:not(.selected):not(.incompatible):not(.mutually-excluded) {
+    border-color: var(--spice-herbs) !important; 
+    background: var(--spice-herbs-bg) !important;
+    color: var(--spice-herbs) !important;
+}
+.tag.spice-herbs:hover { 
+    background: var(--spice-herbs-hover) !important;
+    border-color: var(--spice-herbs) !important;
+    color: var(--spice-herbs) !important;
+}
+.tag.spice-herbs.selected {
+    background: var(--spice-herbs) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-herbs) !important;
+}
+
+.tag.spice-seeds { 
+    border-color: var(--spice-seeds) !important; 
+    background: var(--spice-seeds-bg) !important;
+    color: var(--spice-seeds) !important;
+}
+.tag.spice-seeds:hover { 
+    background: var(--spice-seeds-hover) !important;
+    border-color: var(--spice-seeds) !important;
+    color: var(--spice-seeds) !important;
+}
+.tag.spice-seeds.selected {
+    background: var(--spice-seeds) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-seeds) !important;
+}
+
+.tag.spice-roots { 
+    border-color: var(--spice-roots) !important; 
+    background: var(--spice-roots-bg) !important;
+    color: var(--spice-roots) !important;
+}
+.tag.spice-roots:hover { 
+    background: var(--spice-roots-hover) !important;
+    border-color: var(--spice-roots) !important;
+    color: var(--spice-roots) !important;
+}
+.tag.spice-roots.selected {
+    background: var(--spice-roots) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-roots) !important;
+}
+
+.tag.spice-peppers { 
+    border-color: var(--spice-peppers) !important; 
+    background: var(--spice-peppers-bg) !important;
+    color: var(--spice-peppers) !important;
+}
+.tag.spice-peppers:hover { 
+    background: var(--spice-peppers-hover) !important;
+    border-color: var(--spice-peppers) !important;
+    color: var(--spice-peppers) !important;
+}
+.tag.spice-peppers.selected {
+    background: var(--spice-peppers) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-peppers) !important;
+}
+
+.tag.spice-flowers { 
+    border-color: var(--spice-flowers) !important; 
+    background: var(--spice-flowers-bg) !important;
+    color: var(--spice-flowers) !important;
+}
+.tag.spice-flowers:hover { 
+    background: var(--spice-flowers-hover) !important;
+    border-color: var(--spice-flowers) !important;
+    color: var(--spice-flowers) !important;
+}
+.tag.spice-flowers.selected {
+    background: var(--spice-flowers) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-flowers) !important;
+}
+
+.tag.spice-bark { 
+    border-color: var(--spice-bark) !important; 
+    background: var(--spice-bark-bg) !important;
+    color: var(--spice-bark) !important;
+}
+.tag.spice-bark:hover { 
+    background: var(--spice-bark-hover) !important;
+    border-color: var(--spice-bark) !important;
+    color: var(--spice-bark) !important;
+}
+.tag.spice-bark.selected {
+    background: var(--spice-bark) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-bark) !important;
+}
+
+.tag.spice-berries { 
+    border-color: var(--spice-berries) !important; 
+    background: var(--spice-berries-bg) !important;
+    color: var(--spice-berries) !important;
+}
+.tag.spice-berries:hover { 
+    background: var(--spice-berries-hover) !important;
+    border-color: var(--spice-berries) !important;
+    color: var(--spice-berries) !important;
+}
+.tag.spice-berries.selected {
+    background: var(--spice-berries) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-berries) !important;
+}
+
+.tag.spice-nuts { 
+    border-color: var(--spice-nuts) !important; 
+    background: var(--spice-nuts-bg) !important;
+    color: var(--spice-nuts) !important;
+}
+.tag.spice-nuts:hover { 
+    background: var(--spice-nuts-hover) !important;
+    border-color: var(--spice-nuts) !important;
+    color: var(--spice-nuts) !important;
+}
+.tag.spice-nuts.selected {
+    background: var(--spice-nuts) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-nuts) !important;
+}
+
+.tag.spice-exotic { 
+    border-color: var(--spice-exotic) !important; 
+    background: var(--spice-exotic-bg) !important;
+    color: var(--spice-exotic) !important;
+}
+.tag.spice-exotic:hover { 
+    background: var(--spice-exotic-hover) !important;
+    border-color: var(--spice-exotic) !important;
+    color: var(--spice-exotic) !important;
+}
+.tag.spice-exotic.selected {
+    background: var(--spice-exotic) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-exotic) !important;
+}
+
+.tag.spice-aromatic { 
+    border-color: var(--spice-aromatic) !important; 
+    background: var(--spice-aromatic-bg) !important;
+    color: var(--spice-aromatic) !important;
+}
+.tag.spice-aromatic:hover { 
+    background: var(--spice-aromatic-hover) !important;
+    border-color: var(--spice-aromatic) !important;
+    color: var(--spice-aromatic) !important;
+}
+.tag.spice-aromatic.selected {
+    background: var(--spice-aromatic) !important;
+    color: var(--background) !important;
+    border-color: var(--spice-aromatic) !important;
+}
+
+.selected-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    animation: slideInUp 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.selected-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.selected-group {
+    display: none;
+}
+
+.selected-group.has-items {
+    display: block;
+}
+
+.selected-group-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.selected-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.explanations-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: slideInUp 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.explanation-block {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid;
+}
+
+.explanation-block.compatibility {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.explanation-block.cooking-processes {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.explanation-block.chemical-reactions {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+.explanation-block.recommendations {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.explanation-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.compatibility .explanation-title { color: var(--success); }
+.cooking-processes .explanation-title { color: var(--primary); }
+.chemical-reactions .explanation-title { color: #8b5cf6; }
+.recommendations .explanation-title { color: var(--warning); }
+
+.explanation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.explanation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid var(--primary);
+}
+
+.detailed-explanation {
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary);
+    overflow: hidden;
+}
+
+.explanation-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-bottom: 1px solid var(--border);
+}
+
+.explanation-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.explanation-details {
+    padding: 1.25rem;
+}
+
+.detail-section {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section strong {
+    color: var(--primary);
+    font-weight: 600;
+    display: inline-block;
+    min-width: 140px;
+}
+
+.detail-section.recommendation {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--success);
+}
+
+.detail-section.recommendation strong {
+    color: var(--success);
+}
+
+.explanation-icon {
+    font-size: 1.25rem;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.chemical-reaction {
+    border-left: 4px solid #8b5cf6;
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+}
+
+.reaction-process {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.reaction-details {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.reaction-detail {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.reaction-label {
+    font-weight: 500;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes tagPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.05); }
+}
+
+.tag-select {
+    animation: tagPulse 300ms ease-out;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+    
+    .title {
+        font-size: 2.25rem;
+    }
+    
+    .selected-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .selected-group {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .tag-clouds {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .tag-cloud-section:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Recommendations */
+.recommendations {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recommendations h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.recommendation-group {
+    margin-bottom: 20px;
+}
+
+.recommendation-group:last-child {
+    margin-bottom: 0;
+}
+
+.recommendation-group-title {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+.recommendation-group-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.recommendation-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.recommendation-item {
+    border-radius: 6px;
+    padding: 12px;
+    border-left: 4px solid #e9ecef;
+    transition: all 0.2s ease;
+}
+
+.recommendation-item:hover {
+    transform: translateX(2px);
+}
+
+.recommendation-item.priority-high {
+    border-left-color: #dc3545;
+}
+
+.recommendation-item.priority-medium {
+    border-left-color: #ffc107;
+}
+
+.recommendation-item.priority-low {
+    border-left-color: #28a745;
+}
+
+.recommendation-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.recommendation-content {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Overview Section */
+.overview-section {
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.overview-card {
+    border-left: 4px solid #007bff;
+    padding-left: 16px;
+}
+
+.overview-title {
+    margin: 0 0 12px 0;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.overview-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.overview-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #333;
+}
+
+.complexity-simple { color: #28a745; }
+.complexity-medium { color: #ffc107; }
+.complexity-complex { color: #fd7e14; }
+.complexity-expert { color: #dc3545; }
+
+.flavor-profile {
+    border-top: 1px solid #e9ecef;
+    padding-top: 16px;
+}
+
+.flavor-profile h4 {
+    margin: 0 0 12px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.flavor-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.flavor-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.flavor-tag.dominant {
+    background: #007bff;
+    color: white;
+}
+
+.flavor-tag.secondary {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.flavor-balance {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Scientific Analysis */
+.scientific-analysis {
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.scientific-analysis h4 {
+    margin: 0 0 16px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.scientific-analysis h5 {
+    margin: 16px 0 8px 0;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.compound-item,
+.chemistry-item,
+.nutrition-item {
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-left: 3px solid #007bff;
+}
+
+.compound-item strong,
+.chemistry-item strong,
+.nutrition-item strong {
+    color: #333;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.compound-item p,
+.chemistry-item p,
+.nutrition-item p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.compound-item small,
+.chemistry-item small,
+.nutrition-item small {
+    color: #999;
+    font-size: 12px;
+}
+
+.synergy-badge {
+    background: #28a745;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+/* Spice Mixture Analysis */
+.spice-mixture-analysis {
+    border-radius: 6px;
+    padding: 16px;
+    border-left: 4px solid #ffc107;
+}
+
+.spice-mixture-analysis h4 {
+    margin: 0 0 16px 0;
+    color: #856404;
+    font-size: 18px;
+}
+
+.spice-mixture-analysis h5 {
+    margin: 12px 0 8px 0;
+    color: #856404;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mixture-compatibility,
+.mixture-interactions {
+    margin-bottom: 16px;
+}
+
+.compatibility-score {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #856404;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.interaction-item {
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.interaction-item strong {
+    color: #856404;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Cooking Chemistry Styles */
+.cooking-chemistry {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.chemistry-process {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #2196f3;
+}
+
+.chemistry-process h6 {
+    margin: 0 0 8px 0;
+    color: #1976d2;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.chemistry-process .recommendation {
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+    font-style: italic;
+    color: #f57c00;
+}
+
+.mechanism {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+.bond-interaction {
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.effects-list {
+    margin: 8px 0 0 16px;
+    padding: 0;
+}
+
+.effects-list li {
+    margin-bottom: 4px;
+    color: #555;
+}
+
+/* Enzymatic Reactions */
+.enzymatic-reactions {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.enzyme-reaction {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #4caf50;
+}
+
+.reaction-equation {
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    margin-top: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.benefits {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+.benefits h6 {
+    margin: 0 0 8px 0;
+    color: #2e7d32;
+    font-size: 14px;
+}
+
+.benefits ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+/* Oxidation Processes */
+.oxidation-processes {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.oxidation-process {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #ff9800;
+}
+
+.oxidation-process h6 {
+    margin: 0 0 8px 0;
+    color: #f57c00;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Maillard Reactions */
+.maillard-reactions {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.maillard-reaction {
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 4px solid #d84315;
+}
+
+.maillard-reaction h6 {
+    margin: 0 0 8px 0;
+    color: #d84315;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.reaction-products,
+.reaction-effects {
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin: 6px 0;
+    font-size: 13px;
+}
+
+.reaction-products strong,
+.reaction-effects strong {
+    color: #d84315;
+}
+
+.optimal-conditions {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+
+.optimal-conditions h6 {
+    margin: 0 0 8px 0;
+    color: #f57c00;
+    font-size: 14px;
+}
+
+.optimal-conditions ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.optimal-conditions li {
+    margin-bottom: 4px;
+    color: #555;
+}
+
+/* Solubility Styles */
+.solubility-section {
+    margin-bottom: 20px;
+}
+
+.solubility-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-left: 4px solid #17a2b8;
+}
+
+.solubility-item strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.solubility-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.solubility-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--background);
+    border-radius: 6px;
+    border: 1px solid var(--border-light);
+}
+
+.solubility-medium {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.solubility-level {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.solubility-level.хорошо {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.solubility-level.частично {
+    background: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.solubility-level.плохо {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .overview-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .flavor-tags {
+        justify-content: center;
+    }
+    
+    .solubility-row {
+        flex-direction: column;
+        gap: 4px;
+        text-align: center;
+    }
+    
+    .solubility-details {
+        gap: 12px;
+    }
+}

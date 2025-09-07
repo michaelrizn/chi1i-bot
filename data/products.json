@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "name": "Курица",
+    "category": "птица",
+    "compatible_spices": [1, 2, 3, 4, 5, 6, 7, 13, 20, 22, 25, 41, 42],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [15, 17, 23],
+    "incompatible_methods": [9, 10, 13, 14]
+  },
+  {
+    "id": 2,
+    "name": "Говядина",
+    "category": "мясо",
+    "compatible_spices": [1, 2, 3, 4, 5, 19, 20, 22, 24, 28, 30, 32],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [6, 7, 11, 14],
+    "incompatible_methods": [1, 11, 15]
+  },
+  {
+    "id": 3,
+    "name": "Свинина",
+    "category": "мясо",
+    "compatible_spices": [1, 2, 3, 4, 5, 8, 9, 19, 20, 22, 24, 27, 28],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [15, 17, 25]
+  },
+  {
+    "id": 4,
+    "name": "Рыба",
+    "category": "рыба",
+    "compatible_spices": [6, 7, 11, 15, 18, 20, 26, 39, 41],
+    "incompatible_products": [1, 2, 3, 5, 6, 7, 24],
+    "incompatible_spices": [4, 19, 22, 24, 28, 30],
+    "incompatible_methods": [7, 8, 9, 13, 14]
+  },
+  {
+    "id": 5,
+    "name": "Баранина",
+    "category": "мясо",
+    "compatible_spices": [2, 3, 4, 8, 9, 15, 16, 19, 24, 28, 30, 32],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [6, 7, 11, 26]
+  },
+  {
+    "id": 6,
+    "name": "Утка",
+    "category": "птица",
+    "compatible_spices": [2, 3, 4, 13, 15, 24, 27, 28, 31, 32],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [6, 7, 20, 22]
+  },
+  {
+    "id": 7,
+    "name": "Индейка",
+    "category": "птица",
+    "compatible_spices": [1, 2, 3, 4, 5, 6, 7, 20, 22, 25, 42],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [15, 17, 23, 24]
+  },
+  {
+    "id": 8,
+    "name": "Лосось",
+    "category": "рыба",
+    "compatible_spices": [6, 7, 11, 15, 18, 20, 26, 39, 41],
+    "incompatible_products": [1, 2, 3, 5, 6, 7, 24],
+    "incompatible_spices": [4, 19, 22, 24, 28, 30]
+  },
+  {
+    "id": 9,
+    "name": "Креветки",
+    "category": "морепродукты",
+    "compatible_spices": [6, 7, 11, 15, 18, 20, 23, 39, 41],
+    "incompatible_products": [1, 2, 3, 5, 6, 7, 24],
+    "incompatible_spices": [4, 19, 22, 24, 28]
+  },
+  {
+    "id": 10,
+    "name": "Овощи",
+    "category": "овощи",
+    "compatible_spices": [1, 2, 3, 6, 7, 8, 9, 16, 19, 20, 22],
+    "incompatible_products": [12, 13],
+    "incompatible_spices": [24, 27, 33, 38]
+  },
+  {
+    "id": 11,
+    "name": "Картофель",
+    "category": "овощи",
+    "compatible_spices": [1, 2, 3, 4, 6, 19, 20, 22],
+    "incompatible_products": [12, 13],
+    "incompatible_spices": [15, 23, 25, 27]
+  },
+  {
+    "id": 12,
+    "name": "Рис",
+    "category": "крупы",
+    "compatible_spices": [8, 9, 13, 15, 16, 25, 31, 32],
+    "incompatible_products": [10, 11, 13, 23],
+    "incompatible_spices": [4, 5, 17, 30]
+  },
+  {
+    "id": 13,
+    "name": "Паста",
+    "category": "крупы",
+    "compatible_spices": [1, 2, 3, 6, 19, 20, 22],
+    "incompatible_products": [10, 11, 12, 23],
+    "incompatible_spices": [15, 16, 25, 31]
+  },
+  {
+    "id": 15,
+    "name": "Грибы",
+    "category": "грибы",
+    "compatible_spices": [1, 2, 3, 4, 6, 19, 20, 28],
+    "incompatible_products": [],
+    "incompatible_spices": [25, 27, 33, 38]
+  },
+  {
+    "id": 18,
+    "name": "Хлеб",
+    "category": "выпечка",
+    "compatible_spices": [8, 9, 10, 13, 27, 33, 38],
+    "incompatible_products": [],
+    "incompatible_spices": [4, 5, 15, 17, 23]
+  },
+  {
+    "id": 23,
+    "name": "Капуста",
+    "category": "овощи",
+    "compatible_spices": [8, 9, 10, 19, 20],
+    "incompatible_products": [12, 13],
+    "incompatible_spices": [25, 27, 33, 38]
+  },
+  {
+    "id": 24,
+    "name": "Дичь",
+    "category": "мясо",
+    "compatible_spices": [2, 3, 4, 28, 30, 32],
+    "incompatible_products": [4, 8, 9],
+    "incompatible_spices": [6, 7, 11, 25, 26]
+  }
+]
