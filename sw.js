@@ -1,17 +1,21 @@
 const CACHE_NAME = 'spice-analyzer-v1.0.0';
+const basePath = self.location.pathname.includes('/chi1i-bot/') ? '/chi1i-bot' : '';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/js/i18n.js',
-  '/js/state.js',
-  '/js/compatibility.js',
-  '/js/ui.js',
-  '/js/app.js',
-  '/data/products.json',
-  '/data/methods.json',
-  '/data/spices.json',
-  '/manifest.json'
+  `${basePath}/`,
+  `${basePath}/index.html`,
+  `${basePath}/styles.css`,
+  `${basePath}/js/performance-optimizer.js`,
+  `${basePath}/js/state.js`,
+  `${basePath}/js/compatibility.js`,
+  `${basePath}/js/detailed-analysis.js`,
+  `${basePath}/js/spice-mixture-analysis.js`,
+  `${basePath}/js/comprehensive-analyzer.js`,
+  `${basePath}/js/ui.js`,
+  `${basePath}/js/app.js`,
+  `${basePath}/data/products.json`,
+  `${basePath}/data/methods.json`,
+  `${basePath}/data/spices.json`,
+  `${basePath}/manifest.json`
 ];
 
 self.addEventListener('install', event => {
@@ -52,7 +56,7 @@ self.addEventListener('fetch', event => {
           })
           .catch(() => {
             if (event.request.destination === 'document') {
-              return caches.match('/index.html');
+              return caches.match(`${basePath}/index.html`);
             }
           });
       })
@@ -97,7 +101,7 @@ self.addEventListener('notificationclick', event => {
   event.notification.close();
   
   event.waitUntil(
-    clients.openWindow('/')
+    clients.openWindow(`${basePath}/`)
   );
 });
 

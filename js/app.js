@@ -66,9 +66,12 @@ class SpiceAnalyzerApp {
     }
     
     initializeUI() {
-        if (window.appState) {
-            window.appState.reset();
+        if (!window.appState) {
+            console.error('appState not available during UI initialization');
+            return;
         }
+        
+        window.appState.reset();
         
         if (window.uiManager && window.appState.data) {
             window.uiManager.renderTagClouds(window.appState.data);
@@ -82,9 +85,13 @@ class SpiceAnalyzerApp {
         if (!this.initialized) return;
         
         if (window.uiManager) {
-            window.uiManager.updateTagStates(state);
-            window.uiManager.updateSelectedSection(state);
-            window.uiManager.updateExplanations(state);
+            try {
+                window.uiManager.updateTagStates(state);
+                window.uiManager.updateSelectedSection(state);
+                window.uiManager.updateExplanations(state);
+            } catch (error) {
+                console.error('Error updating UI:', error);
+            }
         }
         
         this.updatePageTitle(state);
@@ -200,6 +207,7 @@ class SpiceAnalyzerApp {
 document.addEventListener('DOMContentLoaded', () => {
     try {
         window.spiceAnalyzerApp = new SpiceAnalyzerApp();
+        registerServiceWorker();
     } catch (error) {
         console.error('Failed to create SpiceAnalyzerApp:', error);
         
@@ -232,3 +240,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(errorDiv);
     }
 });
+
+async function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        try {
+            const basePath = window.location.pathname.includes('/chi1i-bot/') ? '/chi1i-bot' : '';
+            const registration = await navigator.serviceWorker.register(`${basePath}/sw.js`);
+            console.log('SW registered:', registration);
+        } catch (error) {
+            console.log('SW registration failed:', error);
+        }
+    }
+}
